@@ -259,9 +259,9 @@ src_install() {
 	einstalldocs
 	# default
 
-	# Installed by sane-backends
 	# Gentoo Bug: https://bugs.gentoo.org/show_bug.cgi?id=201023
-	rm -f "${ED}"/etc/sane.d/dll.conf || die
+	insinto /etc/sane.d/dll.d
+	newins - ${PN} <<< "hpaio"
 
 	# Remove desktop and autostart files
 	# Gentoo Bug: https://bugs.gentoo.org/show_bug.cgi?id=638770

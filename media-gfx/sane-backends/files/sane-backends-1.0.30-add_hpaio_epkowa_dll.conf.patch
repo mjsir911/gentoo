@@ -5,7 +5,5 @@ diff -Naur backends-1.0.30/backend/dll.conf.in backends-1.0.30-r1/backend/dll.co
  #umax_pp
  v4l
  xerox_mfp
-+# Add support for the HP-specific backend.  Needs net-print/hplip installed.
-+hpaio
 +# Add support for the Epson-specific backend.  Needs media-gfx/iscan installed.
 +epkowa
