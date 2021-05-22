@@ -120,7 +120,8 @@ common-lisp-install-sources() {
 		if [[ -f ${path} ]] ; then
 			common-lisp-install-one-source ${fpredicate} "${path}" "$(dirname "${path}")"
 		elif [[ -d ${path} ]] ; then
-			common-lisp-install-sources -t ${ftype} $(find "${path}" -type f)
+			readarray -d '' FILES < <(find "${path}" -type f -print0)
+			common-lisp-install-sources -t ${ftype} "${FILES[@]}"
 		else
 			die "${path} is neither a regular file nor a directory"
 		fi
