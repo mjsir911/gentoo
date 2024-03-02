@@ -177,7 +177,6 @@ multilib_src_configure() {
 		-Ddri-drivers=$(driver_list "${DRI_DRIVERS[*]}")
 		-Dgallium-drivers=''
 		-Dvulkan-drivers=''
-		-Db_ndebug=$(usex debug false true)
 	)
 	meson_src_configure
 }

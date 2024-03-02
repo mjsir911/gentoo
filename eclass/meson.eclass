@@ -368,7 +368,8 @@ setup_meson_src_configure() {
 
 
 	if in_iuse debug; then
-		use debug && EMESON_BUILDTYPE=debug
+		MESONARGS+=( -Db_ndebug=$(usex debug false true) )
+		use debug && export EMESON_BUILDTYPE=debug
 	fi
 	if [[ -n ${EMESON_BUILDTYPE} ]]; then
 		MESONARGS+=( -Dbuildtype="${EMESON_BUILDTYPE}" )

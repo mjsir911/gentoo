@@ -392,7 +392,6 @@ multilib_src_configure() {
 		-Dvideo-codecs=$(usex proprietary-codecs "all" "all_free")
 		-Dgallium-drivers=$(driver_list "${GALLIUM_DRIVERS[*]}")
 		-Dvulkan-drivers=$(driver_list "${VULKAN_DRIVERS[*]}")
-		-Db_ndebug=$(usex debug false true)
 	)
 	meson_src_configure
 }

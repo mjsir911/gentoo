@@ -74,8 +74,6 @@ src_configure() {
 		-Dglx=disabled
 		-Dlibunwind=disabled
 		-Dzstd=disabled
-
-		-Db_ndebug=$(usex debug false true)
 	)
 	meson_src_configure
 }

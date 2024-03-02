@@ -111,7 +111,6 @@ src_configure() {
 	local emesonargs=(
 		--localstatedir "${EPREFIX}/var"
 		--sysconfdir "${EPREFIX}/etc/X11"
-		-Db_ndebug=$(usex debug false true)
 		$(meson_use !minimal dri1)
 		$(meson_use !minimal dri2)
 		$(meson_use !minimal dri3)
