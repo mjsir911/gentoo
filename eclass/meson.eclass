@@ -366,6 +366,10 @@ setup_meson_src_configure() {
 		"${ltoflags[@]}"
 	)
 
+
+	if in_iuse debug; then
+		use debug && EMESON_BUILDTYPE=debug
+	fi
 	if [[ -n ${EMESON_BUILDTYPE} ]]; then
 		MESONARGS+=( -Dbuildtype="${EMESON_BUILDTYPE}" )
 	fi

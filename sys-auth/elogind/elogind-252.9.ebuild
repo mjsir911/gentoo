@@ -50,6 +50,8 @@ PDEPEND="
 	policykit? ( sys-auth/polkit )
 "
 
+EMESON_BUILDTYPE=release
+
 DOCS=( README.md)
 
 PATCHES=(
@@ -96,8 +98,6 @@ src_configure() {
 	fi
 
 	python_setup
-
-	EMESON_BUILDTYPE="$(usex debug debug release)"
 
 	local emesonargs=(
 		-Ddocdir="${EPREFIX}/usr/share/doc/${PF}"

@@ -371,8 +371,6 @@ multilib_src_configure() {
 		emesonargs+=(-Dglx=disabled)
 	fi
 
-	use debug && EMESON_BUILDTYPE=debug
-
 	emesonargs+=(
 		$(meson_use test build-tests)
 		-Dshared-glapi=enabled

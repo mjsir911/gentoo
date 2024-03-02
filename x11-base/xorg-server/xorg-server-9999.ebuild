@@ -105,8 +105,6 @@ src_configure() {
 	# bug #835653
 	use x86 && replace-flags -Os -O2
 
-	use debug && EMESON_BUILDTYPE=debug
-
 	# localstatedir is used for the log location; we need to override the default
 	#	from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies

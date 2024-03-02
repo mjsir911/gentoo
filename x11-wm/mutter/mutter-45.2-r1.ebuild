@@ -152,8 +152,6 @@ python_check_deps() {
 }
 
 src_configure() {
-	use debug && EMESON_BUILDTYPE=debug
-
 	local emesonargs=(
 		# Mutter X11 renderer only supports gles2 and GLX, thus do NOT pass
 		#

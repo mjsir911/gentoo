@@ -157,8 +157,6 @@ multilib_src_configure() {
 		echo "${drivers//$'\n'/,}"
 	}
 
-	use debug && EMESON_BUILDTYPE=debug
-
 	emesonargs+=(
 		-Damber=true
 		$(meson_use test build-tests)
